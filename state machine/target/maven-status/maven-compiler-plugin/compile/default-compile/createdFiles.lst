@@ -1,0 +1,7 @@
+com\example\runner\main.class
+com\example\initialisation\TriConsumer.class
+com\example\generic\Dispatcher.class
+com\example\generic\ConfigLoader.class
+com\example\generic\StateMachine.class
+com\example\initialisation\Initializer.class
+com\example\initialisation\InitFunctional.class

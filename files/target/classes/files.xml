@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scxml xmlns="http://www.w3.org/2005/07/scxml" version="1.0" initial="start">
+    <state id="start">
+        <transition event="init" target="readParameter"/>
+    </state>
+    <state id="readParameter">
+        <transition event="parameterRead" target="checkParameter"/>
+    </state>
+    <state id="checkParameter">
+        <transition event="parameterInvalid" target="displayInvalidParameter"/>
+        <transition event="parameterValid" target="searchFiles"/>
+    </state>
+    <state id="displayInvalidParameter">
+        <transition event="messageDisplayed" target="stop"/>
+    </state>
+    <state id="searchFiles">
+        <transition event="filesFound" target="extractText"/>
+        <transition event="noFilesFound" target="displayNoFilesFound"/>
+    </state>
+    <state id="displayNoFilesFound">
+        <transition event="messageDisplayed" target="stop"/>
+    </state>
+    <state id="extractText">
+        <transition event="textExtracted" target="moveOriginalFile"/>
+        <transition event="continue" target="checkNextFile"/>
+    </state>
+    <state id="moveOriginalFile">
+        <transition event="originalFileMoved" target="generateNewFile"/>
+        <transition event="continue" target="checkNextFile"/>
+    </state>
+    <state id="generateNewFile">
+        <transition event="fileGenerated" target="moveText"/>
+        <transition event="continue" target="checkNextFile"/>
+    </state>
+    <state id="moveText">
+        <transition event="textMoved" target="moveFileToNewFolder"/>
+        <transition event="continue" target="checkNextFile"/>
+    </state>
+    <state id="moveFileToNewFolder">
+        <transition event="fileMoved" target="checkNextFile"/>
+        <transition event="continue" target="checkNextFile"/>
+    </state>
+    <state id="checkNextFile">
+        <transition event="nextFileExists" target="extractText"/>
+        <transition event="noMoreFiles" target="displayCompletion"/>
+    </state>
+    <state id="displayCompletion">
+        <transition event="messageDisplayed" target="stop"/>
+    </state>
+    <final id="stop"/>
+</scxml>
