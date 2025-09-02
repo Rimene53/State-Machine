@@ -1,4 +1,11 @@
-this project is a state machine runner 
-to run it :
-open folder "statemachine " then folder "bin"
-double click on runner 
+# State Machine Project
+
+## Description
+Ce projet implémente une machine à états en Java avec Spring Boot.  
+Il permet de gérer des transitions d’états à partir d’un fichier de configuration JSON.
+
+## Comment exécuter 
+Pour l’exécuter :  
+Ouvrez le dossier **"statemachine"**, puis le dossier **"bin"**.  
+Double-cliquez sur **runner**.  
+
