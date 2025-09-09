@@ -1,10 +1,14 @@
-# VSCode configs
+# Ignorer tous les dossiers .vscode
 .vscode/
-*/.vscode/
+**/.vscode/
 
-# Maven/Gradle target folders
-target/
-*/target/
 
-# State machine generated files
-statemachine/
+# Ignorer les dossiers target files/target/
+trafic/target/
+state machine/target/
+
+# Ignorer  statemachine.zip dans state machine
+state machine/statemachine.zip
+
+# Ignorer le dossier .. dans state machine
+state machine/..*
