@@ -1,10 +1,10 @@
-.vscode
-projet final 4 work\files\.vscode
-projet final 4 work\files\target
-projet final 4 work\trafic\.vscode
-projet final 4 work\trafic\target
-projet final 4 work\state machine\.vscode
-projet final 4 work\state machine\target
-projet final 4 work\state machine\statemachine
+# VSCode configs
+.vscode/
+*/.vscode/
 
+# Maven/Gradle target folders
+target/
+*/target/
 
+# State machine generated files
+statemachine/
